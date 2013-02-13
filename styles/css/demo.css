@@ -53,11 +53,11 @@ footer { margin-top: 3em; text-align: center; }
 #main:after { clear: both; }
 /* line 138, ../scss/demo.scss */
 #main div { padding: 2em 0.5em; margin: 2em 0; background: white; border-radius: .3em; border: thin solid rgba(0, 0, 0, 0.15); text-align: center; }
-@media (min-width: 768px) { /* line 138, ../scss/demo.scss */
+@media (min-width: 800px) { /* line 138, ../scss/demo.scss */
   #main div { width: 46%; float: left; margin-left: 8%; }
   /* line 153, ../scss/demo.scss */
   #main div:nth-child(odd) { margin-left: 0; } }
-@media (min-width: 1320px) { /* line 138, ../scss/demo.scss */
+@media (min-width: 1400px) { /* line 138, ../scss/demo.scss */
   #main div { width: 28%; }
   /* line 159, ../scss/demo.scss */
   #main div:nth-child(odd) { margin-left: 8%; }
@@ -67,14 +67,14 @@ footer { margin-top: 3em; text-align: center; }
 #main div p { margin-bottom: .3em; }
 /* line 166, ../scss/demo.scss */
 #main div:hover p { opacity: 1; }
-/* line 169, ../scss/demo.scss */
-#main div:hover code span { -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
 /* line 170, ../scss/demo.scss */
-#main div:hover code .function { color: #940252; }
+#main div:hover code span { -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
 /* line 171, ../scss/demo.scss */
-#main div:hover code .mixin { color: #669931; }
+#main div:hover code .function { color: #940252; }
 /* line 172, ../scss/demo.scss */
+#main div:hover code .mixin { color: #669931; }
+/* line 173, ../scss/demo.scss */
 #main div:hover code .args { color: #0077aa; }
 
-/* line 178, ../scss/demo.scss */
-code { font: 1em/1 Monaco, "Liberation Mono", Courier, monospace; color: #bbb; display: inline-block; width: 100%; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }
+/* line 179, ../scss/demo.scss */
+code { font: 0.9em/0.8 Monaco, "Liberation Mono", Courier, monospace; color: #bbb; }
