@@ -135,6 +135,12 @@ footer {
 	margin-top: 1.5em;
 	@include clearfix;
 
+	// Animation
+	@include experimental(animation-fill-mode, both);
+	@include experimental(animation-duration, 1s);
+	@include experimental(animation-name, bounceInUp);
+	@include experimental(animation-delay, .3s);
+
 	div {
 		padding: 2em .5em;
 		margin: 2em 0;
@@ -179,4 +185,87 @@ footer {
 code {
 	font: 0.9em/0.8 Monaco, "Liberation Mono", Courier, monospace;
 	color: #bbb;
+}
+
+/******************************************************************
+ANIMATION STYLES
+******************************************************************/
+
+@-webkit-keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-webkit-transform: translateY(-30px);
+	}
+	
+	80% {
+		-webkit-transform: translateY(10px);
+	}
+	
+	100% {
+		-webkit-transform: translateY(0);
+	}
+}
+@-moz-keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-moz-transform: translateY(-30px);
+	}
+	
+	80% {
+		-moz-transform: translateY(10px);
+	}
+	
+	100% {
+		-moz-transform: translateY(0);
+	}
+}
+
+@-o-keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		-o-transform: translateY(-30px);
+	}
+	
+	80% {
+		-o-transform: translateY(10px);
+	}
+	
+	100% {
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes bounceInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(2000px);
+	}
+	
+	60% {
+		opacity: 1;
+		transform: translateY(-30px);
+	}
+	
+	80% {
+		transform: translateY(10px);
+	}
+	
+	100% {
+		transform: translateY(0);
+	}
 }

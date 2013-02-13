@@ -46,35 +46,74 @@ p { margin: 0 0 1em; }
 footer { margin-top: 3em; text-align: center; }
 
 /* line 134, ../scss/demo.scss */
-#main { margin-top: 1.5em; *zoom: 1; }
+#main { margin-top: 1.5em; *zoom: 1; -webkit-animation-fill-mode: both; -moz-animation-fill-mode: both; -ms-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-duration: 1s; -moz-animation-duration: 1s; -ms-animation-duration: 1s; -o-animation-duration: 1s; animation-duration: 1s; -webkit-animation-name: bounceInUp; -moz-animation-name: bounceInUp; -ms-animation-name: bounceInUp; -o-animation-name: bounceInUp; animation-name: bounceInUp; -webkit-animation-delay: 0.3s; -moz-animation-delay: 0.3s; -ms-animation-delay: 0.3s; -o-animation-delay: 0.3s; animation-delay: 0.3s; }
 /* line 78, ../scss/demo.scss */
 #main:before, #main:after { display: table; content: ''; }
 /* line 79, ../scss/demo.scss */
 #main:after { clear: both; }
-/* line 138, ../scss/demo.scss */
+/* line 144, ../scss/demo.scss */
 #main div { padding: 2em 0.5em; margin: 2em 0; background: white; border-radius: .3em; border: thin solid rgba(0, 0, 0, 0.15); text-align: center; }
-@media (min-width: 800px) { /* line 138, ../scss/demo.scss */
+@media (min-width: 800px) { /* line 144, ../scss/demo.scss */
   #main div { width: 46%; float: left; margin-left: 8%; }
-  /* line 153, ../scss/demo.scss */
-  #main div:nth-child(odd) { margin-left: 0; } }
-@media (min-width: 1400px) { /* line 138, ../scss/demo.scss */
-  #main div { width: 28%; }
   /* line 159, ../scss/demo.scss */
+  #main div:nth-child(odd) { margin-left: 0; } }
+@media (min-width: 1400px) { /* line 144, ../scss/demo.scss */
+  #main div { width: 28%; }
+  /* line 165, ../scss/demo.scss */
   #main div:nth-child(odd) { margin-left: 8%; }
-  /* line 160, ../scss/demo.scss */
+  /* line 166, ../scss/demo.scss */
   #main div:nth-child(3n+1) { margin-left: 0; } }
-/* line 163, ../scss/demo.scss */
+/* line 169, ../scss/demo.scss */
 #main div p { margin-bottom: .3em; }
-/* line 166, ../scss/demo.scss */
-#main div:hover p { opacity: 1; }
-/* line 170, ../scss/demo.scss */
-#main div:hover code span { -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
-/* line 171, ../scss/demo.scss */
-#main div:hover code .function { color: #940252; }
 /* line 172, ../scss/demo.scss */
+#main div:hover p { opacity: 1; }
+/* line 176, ../scss/demo.scss */
+#main div:hover code span { -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
+/* line 177, ../scss/demo.scss */
+#main div:hover code .function { color: #940252; }
+/* line 178, ../scss/demo.scss */
 #main div:hover code .mixin { color: #669931; }
-/* line 173, ../scss/demo.scss */
+/* line 179, ../scss/demo.scss */
 #main div:hover code .args { color: #0077aa; }
 
-/* line 179, ../scss/demo.scss */
+/* line 185, ../scss/demo.scss */
 code { font: 0.9em/0.8 Monaco, "Liberation Mono", Courier, monospace; color: #bbb; }
+
+/******************************************************************
+ANIMATION STYLES
+******************************************************************/
+@-webkit-keyframes bounceInUp { /* line 195, ../scss/demo.scss */
+  0% { opacity: 0; -webkit-transform: translateY(2000px); }
+  /* line 200, ../scss/demo.scss */
+  60% { opacity: 1; -webkit-transform: translateY(-30px); }
+  /* line 205, ../scss/demo.scss */
+  80% { -webkit-transform: translateY(10px); }
+  /* line 209, ../scss/demo.scss */
+  100% { -webkit-transform: translateY(0); } }
+
+@-moz-keyframes bounceInUp { /* line 214, ../scss/demo.scss */
+  0% { opacity: 0; -moz-transform: translateY(2000px); }
+  /* line 219, ../scss/demo.scss */
+  60% { opacity: 1; -moz-transform: translateY(-30px); }
+  /* line 224, ../scss/demo.scss */
+  80% { -moz-transform: translateY(10px); }
+  /* line 228, ../scss/demo.scss */
+  100% { -moz-transform: translateY(0); } }
+
+@-o-keyframes bounceInUp { /* line 234, ../scss/demo.scss */
+  0% { opacity: 0; -o-transform: translateY(2000px); }
+  /* line 239, ../scss/demo.scss */
+  60% { opacity: 1; -o-transform: translateY(-30px); }
+  /* line 244, ../scss/demo.scss */
+  80% { -o-transform: translateY(10px); }
+  /* line 248, ../scss/demo.scss */
+  100% { -o-transform: translateY(0); } }
+
+@keyframes bounceInUp { /* line 254, ../scss/demo.scss */
+  0% { opacity: 0; transform: translateY(2000px); }
+  /* line 259, ../scss/demo.scss */
+  60% { opacity: 1; transform: translateY(-30px); }
+  /* line 264, ../scss/demo.scss */
+  80% { transform: translateY(10px); }
+  /* line 268, ../scss/demo.scss */
+  100% { transform: translateY(0); } }
