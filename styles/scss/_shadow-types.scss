@@ -49,6 +49,12 @@
 
 @mixin shadow-curved-top {
 	&:before {
+		bottom: 50%;
+	}
+}
 
+@mixin shadow-curved-bottom {
+	&:before {
+		top: 50%;
 	}
 }

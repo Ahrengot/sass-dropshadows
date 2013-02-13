@@ -12,7 +12,7 @@ SHADOW MIXINS
 /******************************************************************
 SHADOW CLASSES
 ******************************************************************/
-/* line 43, ../scss/shadows.scss */
+/* line 51, ../scss/shadows.scss */
 .shadow.lifted { position: relative; }
 /* line 18, ../scss/shadows.scss */
 .shadow.lifted:before, .shadow.lifted:after { position: absolute; z-index: -2; content: ""; }
@@ -23,7 +23,7 @@ SHADOW CLASSES
 /* line 12, ../scss/_shadow-types.scss */
 .shadow.lifted:after { right: 10px; -webkit-transform: rotate(3deg); -moz-transform: rotate(3deg); -ms-transform: rotate(3deg); -o-transform: rotate(3deg); transform: rotate(3deg); }
 
-/* line 43, ../scss/shadows.scss */
+/* line 51, ../scss/shadows.scss */
 .shadow.perspective { position: relative; }
 /* line 18, ../scss/shadows.scss */
 .shadow.perspective:before, .shadow.perspective:after { position: absolute; z-index: -2; content: ""; }
@@ -32,34 +32,45 @@ SHADOW CLASSES
 /* line 26, ../scss/_shadow-types.scss */
 .shadow.perspective:after { display: none; content: none; }
 
-/* line 43, ../scss/shadows.scss */
+/* line 51, ../scss/shadows.scss */
 .shadow.raised { position: relative; -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5); box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5); }
 /* line 18, ../scss/shadows.scss */
 .shadow.raised:before, .shadow.raised:after { position: absolute; z-index: -2; content: ""; }
 /* line 34, ../scss/_shadow-types.scss */
 .shadow.raised:before, .shadow.raised:after { content: none; }
 
-/* line 43, ../scss/shadows.scss */
+/* line 51, ../scss/shadows.scss */
 .shadow.curved { position: relative; }
 /* line 18, ../scss/shadows.scss */
 .shadow.curved:before, .shadow.curved:after { position: absolute; z-index: -2; content: ""; }
 /* line 40, ../scss/_shadow-types.scss */
 .shadow.curved:before { top: 1px; bottom: 0; left: 12px; right: 12px; -webkit-box-shadow: 0 0 13px 4px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 13px 4px rgba(0, 0, 0, 0.5); box-shadow: 0 0 13px 4px rgba(0, 0, 0, 0.5); -moz-border-radius: 150px/10px; border-radius: 150px/10px; }
 
-/* line 43, ../scss/shadows.scss */
+/* line 51, ../scss/shadows.scss */
 .shadow.curved-top { position: relative; }
 /* line 18, ../scss/shadows.scss */
 .shadow.curved-top:before, .shadow.curved-top:after { position: absolute; z-index: -2; content: ""; }
 /* line 40, ../scss/_shadow-types.scss */
 .shadow.curved-top:before { top: 1px; bottom: 0; left: 12px; right: 12px; -webkit-box-shadow: 0 0 13px 4px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 13px 4px rgba(0, 0, 0, 0.5); box-shadow: 0 0 13px 4px rgba(0, 0, 0, 0.5); -moz-border-radius: 150px/10px; border-radius: 150px/10px; }
+/* line 51, ../scss/_shadow-types.scss */
+.shadow.curved-top:before { bottom: 50%; }
 
-/* line 53, ../scss/shadows.scss */
-.shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top) { position: relative; }
+/* line 51, ../scss/shadows.scss */
+.shadow.curved-bottom { position: relative; }
 /* line 18, ../scss/shadows.scss */
-.shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):before, .shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):after { position: absolute; z-index: -2; content: ""; }
+.shadow.curved-bottom:before, .shadow.curved-bottom:after { position: absolute; z-index: -2; content: ""; }
+/* line 40, ../scss/_shadow-types.scss */
+.shadow.curved-bottom:before { top: 1px; bottom: 0; left: 12px; right: 12px; -webkit-box-shadow: 0 0 13px 4px rgba(0, 0, 0, 0.5); -moz-box-shadow: 0 0 13px 4px rgba(0, 0, 0, 0.5); box-shadow: 0 0 13px 4px rgba(0, 0, 0, 0.5); -moz-border-radius: 150px/10px; border-radius: 150px/10px; }
+/* line 57, ../scss/_shadow-types.scss */
+.shadow.curved-bottom:before { top: 50%; }
+
+/* line 61, ../scss/shadows.scss */
+.shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):not(.curved-bottom) { position: relative; }
+/* line 18, ../scss/shadows.scss */
+.shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):not(.curved-bottom):before, .shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):not(.curved-bottom):after { position: absolute; z-index: -2; content: ""; }
 /* line 2, ../scss/_shadow-types.scss */
-.shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):before, .shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):after { bottom: 12px; width: 50%; height: 55%; max-width: 300px; max-height: 100px; -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); }
+.shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):not(.curved-bottom):before, .shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):not(.curved-bottom):after { bottom: 12px; width: 50%; height: 55%; max-width: 300px; max-height: 100px; -webkit-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); -moz-box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7); }
 /* line 11, ../scss/_shadow-types.scss */
-.shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):before { left: 10px; -webkit-transform: rotate(-3deg); -moz-transform: rotate(-3deg); -ms-transform: rotate(-3deg); -o-transform: rotate(-3deg); transform: rotate(-3deg); }
+.shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):not(.curved-bottom):before { left: 10px; -webkit-transform: rotate(-3deg); -moz-transform: rotate(-3deg); -ms-transform: rotate(-3deg); -o-transform: rotate(-3deg); transform: rotate(-3deg); }
 /* line 12, ../scss/_shadow-types.scss */
-.shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):after { right: 10px; -webkit-transform: rotate(3deg); -moz-transform: rotate(3deg); -ms-transform: rotate(3deg); -o-transform: rotate(3deg); transform: rotate(3deg); }
+.shadow:not(.lifted):not(.perspective):not(.raised):not(.curved):not(.curved-top):not(.curved-bottom):after { right: 10px; -webkit-transform: rotate(3deg); -moz-transform: rotate(3deg); -ms-transform: rotate(3deg); -o-transform: rotate(3deg); transform: rotate(3deg); }
