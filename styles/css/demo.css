@@ -61,10 +61,16 @@ footer { margin-top: 3em; text-align: center; }
   #main div:nth-child(3n+1) { margin-left: 0; } }
 /* line 118, ../scss/demo.scss */
 #main div p { margin-bottom: .3em; }
-/* line 120, ../scss/demo.scss */
-#main div p span { display: none; }
-/* line 123, ../scss/demo.scss */
+/* line 121, ../scss/demo.scss */
 #main div:hover p { opacity: 1; }
-
+/* line 124, ../scss/demo.scss */
+#main div:hover code span { -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
+/* line 125, ../scss/demo.scss */
+#main div:hover code .function { color: #940252; }
+/* line 126, ../scss/demo.scss */
+#main div:hover code .mixin { color: #669931; }
 /* line 127, ../scss/demo.scss */
-code { font: 1em/1 Monaco, "Liberation Mono", Courier, monospace; color: #bbb; }
+#main div:hover code .args { color: #0077aa; }
+
+/* line 133, ../scss/demo.scss */
+code { font: 1em/1 Monaco, "Liberation Mono", Courier, monospace; color: #bbb; display: inline-block; width: 100%; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; -o-text-overflow: ellipsis; text-overflow: ellipsis; }

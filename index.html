@@ -40,74 +40,68 @@
 		<header>
 			<h1 class="emboss">SASS drop shadows without images</h1>
 			<p>A bunch of CSS classes and SASS mixins for creating resolution-independent crisp and visually appealing shadows without using any images</p>
-			<p>It's really simple to use these. Just add the CSS class or apply the mixin. For documentation <a href="https://github.com/Ahrengot/sass-dropshadows" target="_blank">head over to the Github page</a> &hellip;</p>
+			<p>It's really simple to use these. Just add the CSS class or apply the mixin. For documentation <a href="https://github.com/Ahrengot/sass-dropshadows" target="_blank">head over to the Github page</a>&nbsp;&hellip;</p>
 		</header>
 		
 		<div id="main" role="main">
 			<div class="shadow">
 				<h2>Default</h2>
-				<p><span>CSS Class:</span> <code>.shadow</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow();</code></p>
+				<p><code>.shadow</code></p>
+				<p><code>@include shadow();</code></p>
 			</div>
 			
 			<div class="shadow raised">
 				<h2>Raised</h2>
-				<p><span>CSS Class:</span> <code>.shadow.raised</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow(raised);</code></p>
+				<p><code>.shadow.raised</code></p>
+				<p><code>@include shadow(raised);</code></p>
 			</div>
 
 			<div class="shadow perspective">
 				<h2>Perspective</h2>
-				<p><span>CSS Class:</span> <code>.shadow.perspective</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow(perspective);</code></p>
+				<p><code>.shadow.perspective</code></p>
+				<p><code>@include shadow(perspective);</code></p>
 			</div>
 
 			<div class="shadow perspective-right">
 				<h2>Perspective right</h2>
-				<p><span>CSS Class:</span> <code>.shadow.perspective-right</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow(perspective-right);</code></p>
+				<p><code>.shadow.perspective-right</code></p>
+				<p><code>@include shadow(perspective-right);</code></p>
 			</div>
 			
 			<div class="shadow curved">
-				<h2>curved</h2>
-				<p><span>CSS Class:</span> <code>.shadow.curved</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow(curved);</code></p>
+				<h2>Curved</h2>
+				<p><code>.shadow.curved</code></p>
+				<p><code>@include shadow(curved);</code></p>
 			</div>
 
 			<div class="shadow curved-top">
-				<h2>curved top</h2>
-				<p><span>CSS Class:</span> <code>.shadow.curved-top</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow(curved-top);</code></p>
+				<h2>Curved top</h2>
+				<p><code>.shadow.curved-top</code></p>
+				<p><code>@include shadow(curved-top);</code></p>
 			</div>
 
 			<div class="shadow curved-bottom">
-				<h2>curved bottom</h2>
-				<p><span>CSS Class:</span> <code>.shadow.curved-bottom</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow(curved-bottom);</code></p>
+				<h2>Curved bottom</h2>
+				<p><code>.shadow.curved-bottom</code></p>
+				<p><code>@include shadow(curved-bottom);</code></p>
 			</div>
 			
 			<div class="shadow curved-vertical">
 				<h2>Curved vertical</h2>
-				<p><span>CSS Class:</span> <code>.shadow.curved-vertical</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow(curved-vertical);</code></p>
+				<p><code>.shadow.curved-vertical</code></p>
+				<p><code>@include shadow(curved-vertical);</code></p>
 			</div>
 			
 			<div class="shadow curved-vertical-left">
 				<h2>Curved vertical left</h2>
-				<p><span>CSS Class:</span> <code>.shadow.curved-vertical-left</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow(curved-vertical-left);</code></p>
+				<p><code>.shadow.curved-vertical-left</code></p>
+				<p><code>@include shadow(curved-vertical-left);</code></p>
 			</div>
 
 			<div class="shadow curved-vertical-right">
 				<h2>Curved vertical right</h2>
-				<p><span>CSS Class:</span> <code>.shadow.curved-vertical-right</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow(curved-vertical-right);</code></p>
-			</div>
-			
-			<div class="shadow">
-				<h2>Rotated box</h2>
-				<p><span>CSS Class:</span> <code>.shadow</code></p>
-				<p><span>SASS mixin:</span> <code>@include shadow();</code></p>
+				<p><code>.shadow.curved-vertical-right</code></p>
+				<p><code>@include shadow(curved-vertical-right);</code></p>
 			</div>
 		</div>
 		
@@ -117,7 +111,32 @@
 		</footer>
 	</div>
 
+
 	<script src="https://apis.google.com/js/plusone.js"></script>
+	
+	<script>
+		/* 
+		 * Silly little code highlighter thingy
+		 */
+		var codeBlocks = document.getElementsByTagName("code");
+
+		for (var i = codeBlocks.length - 1; i >= 0; i--) {
+			var code = codeBlocks[i],
+				text = code.innerText;
+
+			// First, add the text content as title to the <code> tag so
+			// it's visible on hover if the line is being cut off by ellipsis
+			code.setAttribute("title", text);
+
+			// Second, wrap various pars of the spring in spans with relevant calsses
+			// that we can hook into with CSS
+			var find = /(@include)\s(\w+)\(([a-z|-]+)?\)/g;
+			var replace = '<span class="function">$1</span> <span class="mixin">$2</span>(<span class="args">$3</span>)';
+			text = text.replace(find, replace);
+
+			code.innerHTML = text;
+		};
+	</script>
 
   	<script >
 		var _gaq = _gaq || [];

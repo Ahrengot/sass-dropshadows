@@ -115,16 +115,31 @@ footer {
 			&:nth-child(3n+1) { margin-left: 0; }
 		}
 
-		p {
-			margin-bottom: .3em;
-			span { display: none; }
-		}
+		p { margin-bottom: .3em; }
 
-		&:hover p { opacity: 1; }
+		&:hover {
+			p { opacity: 1; }
+
+			code {
+				span { @include transition(color .15s ease-out); }
+				.function { color: #940252; }
+				.mixin { color: #669931; }
+				.args { color: #0077aa; }
+			}
+		}
 	}
 }
 
 code {
 	font: 1em/1 Monaco, "Liberation Mono", Courier, monospace;
 	color: #bbb;
+
+	display: inline-block;
+
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
 }
