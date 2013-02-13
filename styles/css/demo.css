@@ -1,38 +1,62 @@
-/* line 3, ../scss/demo.scss */
-* { margin: 0; padding: 0; }
+/******************************************************************
+COMPASS IMPORTS
+******************************************************************/
+/******************************************************************
+MIXINS
+******************************************************************/
+/******************************************************************
+STYLING
+******************************************************************/
+/* line 36, ../scss/demo.scss */
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-/* line 5, ../scss/demo.scss */
+/* line 38, ../scss/demo.scss */
 body { background: #eee; font: 14px/1.25 "Helvetica Neue", sans-serif; color: #444; }
+@media (min-width: 1500px) { /* line 38, ../scss/demo.scss */
+  body { font-size: 17px; } }
 
-/* line 11, ../scss/demo.scss */
-h1, h2, h3, h4, h5, h6 { color: #222; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
-/* line 16, ../scss/demo.scss */
+/* line 46, ../scss/demo.scss */
+h1, h2, h3, h4, h5, h6 { color: #222; line-height: 1em; margin-bottom: .5em; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+/* line 53, ../scss/demo.scss */
 h1.emboss, h2.emboss, h3.emboss, h4.emboss, h5.emboss, h6.emboss { text-shadow: 0 1px 2px white; }
 
-/* line 21, ../scss/demo.scss */
+/* line 58, ../scss/demo.scss */
 a { color: #0088cc; text-decoration: none; -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
-/* line 26, ../scss/demo.scss */
+/* line 63, ../scss/demo.scss */
 a:hover, a:focus { text-decoration: underline; }
-/* line 27, ../scss/demo.scss */
+/* line 64, ../scss/demo.scss */
 a:active { color: #005580; }
 
-/* line 30, ../scss/demo.scss */
+/* line 67, ../scss/demo.scss */
 #container { width: 80%; margin: 4% auto 10%; max-width: 1380px; }
 
-/* line 36, ../scss/demo.scss */
-.box { padding: 3em; margin: 1em 0; background: white; border-radius: .2em; text-align: center; }
-/* line 45, ../scss/demo.scss */
-.box p { -webkit-transition: opacity 0.2s ease-out; -moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; transition: opacity 0.2s ease-out; }
-/* line 49, ../scss/demo.scss */
-.box p:first-of-type { margin-top: .8em; }
-/* line 51, ../scss/demo.scss */
-.box p span, .box p code { display: inline-block; width: 48%; }
-/* line 53, ../scss/demo.scss */
-.box p span { text-align: right; }
-/* line 55, ../scss/demo.scss */
-.box p code { text-align: left; float: right; }
-/* line 58, ../scss/demo.scss */
-.box:hover p { opacity: 1; }
+/* line 73, ../scss/demo.scss */
+footer { margin-top: 3em; text-align: center; }
+/* line 75, ../scss/demo.scss */
+footer p { margin: 0 0 1em; }
 
-/* line 61, ../scss/demo.scss */
+/* line 78, ../scss/demo.scss */
+#main { margin-top: 1.5em; *zoom: 1; }
+/* line 29, ../scss/demo.scss */
+#main:before, #main:after { display: table; content: ''; }
+/* line 30, ../scss/demo.scss */
+#main:after { clear: both; }
+/* line 82, ../scss/demo.scss */
+#main div { padding: 2em 0.5em; margin: 1em 0; background: white; border-radius: .2em; text-align: center; -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15); box-shadow: 0 0 3px rgba(0, 0, 0, 0.15); }
+@media (min-width: 768px) { /* line 82, ../scss/demo.scss */
+  #main div { width: 46%; float: left; margin-left: 8%; }
+  /* line 99, ../scss/demo.scss */
+  #main div:nth-child(odd) { margin-left: 0; } }
+@media (min-width: 1320px) { /* line 82, ../scss/demo.scss */
+  #main div { width: 28%; }
+  /* line 105, ../scss/demo.scss */
+  #main div:nth-child(odd) { margin-left: 8%; }
+  /* line 106, ../scss/demo.scss */
+  #main div:nth-child(3n+1) { margin-left: 0; } }
+/* line 110, ../scss/demo.scss */
+#main div p span { display: none; }
+/* line 113, ../scss/demo.scss */
+#main div:hover p { opacity: 1; }
+
+/* line 117, ../scss/demo.scss */
 code { font: 1em/1 Monaco, "Liberation Mono", Courier, monospace; color: #bbb; }

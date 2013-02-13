@@ -1,15 +1,52 @@
+/******************************************************************
+COMPASS IMPORTS
+******************************************************************/
 @import "compass/css3";
 
-* { margin: 0; padding: 0; }
+/******************************************************************
+MIXINS
+******************************************************************/
+@mixin breakpoint($point) {
+	@if $point == s {
+		@media (min-width: 320px) { @content; }
+	}
+
+	@else if $point == m {
+		@media (min-width: 768px) { @content; }
+	}
+
+	@else if $point == l {
+		@media (min-width: 1320px) { @content; }
+	}
+
+	@else if $point == xl {
+		@media (min-width: 1500px) { @content; }
+	}
+}
+
+@mixin clearfix() {
+	*zoom: 1;
+	&:before, &:after { display: table; content: ''; }
+	&:after { clear: both; }
+}
+
+/******************************************************************
+STYLING
+******************************************************************/
+* { margin: 0; padding: 0; @include box-sizing(border-box); }
 
 body {
 	background: #eee;
 	font: 14px/1.25 'Helvetica Neue', sans-serif;
 	color: #444;
+
+	@include breakpoint(xl) { font-size: 17px; }
 }
 
 h1, h2, h3, h4, h5, h6 { 
 	color: #222;
+	line-height: 1em;
+	margin-bottom: .5em;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 
@@ -33,29 +70,48 @@ a {
 	max-width: 1380px;
 }
 
-.box {
-	padding: 3em;
-	margin: 1em 0;
+footer { 
+	margin-top: 3em; text-align: center; 
+	p { margin: 0 0 1em; }
+}
 
-	background: white;
-	border-radius: .2em;
-	
-	text-align: center;
+#main {
+	margin-top: 1.5em;
+	@include clearfix;
 
-	p {
-		// opacity: 0;
-		@include transition(opacity .2s ease-out);
+	div {
+		padding: 2em .5em;
+		margin: 1em 0;
 
-		&:first-of-type { margin-top: .8em; }
+		background: white;
+		border-radius: .2em;
 		
-		span, code { display: inline-block; width: 48%; }
+		text-align: center;
 
-		span { text-align: right; }
+		@include box-shadow(0 0 3px rgba(black, .15));
 
-		code { text-align: left; float: right; }
+
+		@include breakpoint(m) {
+			width: 46%;
+			float: left;
+			margin-left: 8%;
+
+			&:nth-child(odd) { margin-left: 0; }
+		}
+
+		@include breakpoint(l) {
+			width: 28%;
+			
+			&:nth-child(odd) { margin-left: 8%; }
+			&:nth-child(3n+1) { margin-left: 0; }
+		}
+
+		p {
+			span { display: none; }
+		}
+
+		&:hover p { opacity: 1; }
 	}
-
-	&:hover p { opacity: 1; }
 }
 
 code {
