@@ -2,3 +2,4 @@
 *.sublime-project
 *.DS_Store
 *.psd
+.sass-cache/**

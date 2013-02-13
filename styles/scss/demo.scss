@@ -1,0 +1,64 @@
+@import "compass/css3";
+
+* { margin: 0; padding: 0; }
+
+body {
+	background: #eee;
+	font: 14px/1.25 'Helvetica Neue', sans-serif;
+	color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+	color: #222;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+
+	&.emboss {
+		text-shadow: 0 1px 2px white;
+	}
+}
+
+a { 
+	color: #0088cc; 
+	text-decoration: none;
+
+	@include transition(color .15s ease-out);
+	&:hover, &:focus { text-decoration: underline; }
+	&:active { color: #005580; }
+}
+
+#container {
+	width: 80%;
+	margin: 4% auto 10%;
+	max-width: 1380px;
+}
+
+.box {
+	padding: 3em;
+	margin: 1em 0;
+
+	background: white;
+	border-radius: .2em;
+	
+	text-align: center;
+
+	p {
+		// opacity: 0;
+		@include transition(opacity .2s ease-out);
+
+		&:first-of-type { margin-top: .8em; }
+		
+		span, code { display: inline-block; width: 48%; }
+
+		span { text-align: right; }
+
+		code { text-align: left; float: right; }
+	}
+
+	&:hover p { opacity: 1; }
+}
+
+code {
+	font: 1em/1 Monaco, "Liberation Mono", Courier, monospace;
+	color: #bbb;
+}
