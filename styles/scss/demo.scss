@@ -1,5 +1,7 @@
-/******************************************************************
-COMPASS IMPORTS
+/*****************************************************************
+IMPORT COMPASS
+- If you don't have Compass you can create your own mixins
+for CSS3 or use bourbon etc.
 ******************************************************************/
 @import "compass/css3";
 
@@ -58,6 +60,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: 3em;
 	max-width: 80%;
+	word-break: hyphenate;
 }
 
 a { 
@@ -87,7 +90,7 @@ footer {
 
 	div {
 		padding: 2em .5em;
-		margin: 1em 0;
+		margin: 2em 0;
 
 		background: white;
 		border-radius: .3em;

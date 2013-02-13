@@ -1,9 +1,14 @@
 /*****************************************************************
-COMPASS IMPORTS
+IMPORT COMPASS
 - If you don't have Compass you can create your own mixins
-or use bourbon etc.
+for CSS3 or use bourbon etc.
 ******************************************************************/
 @import "compass/css3";
+
+/******************************************************************
+IMPORT SHADOW TYPES
+******************************************************************/
+@import "shadow-types";
 
 /******************************************************************
 SHADOW MIXINS
@@ -21,69 +26,18 @@ SHADOW MIXINS
 	@if $type == raised { @include shadow-raised(); }
 	@if $type == curved { 
 		@include shadow-curved(); 
-		@include shadow-curved-top-bottom();
-	}
-}
-
-@mixin shadow-lifted {
-	&:before, &:after {
-		bottom:12px;
-		width:50%; height:55%;
-		max-width:300px;
-		max-height:100px;
-
-		@include box-shadow(0 15px 10px rgba(black, .7));
 	}
 
-	&:before { left: 10px; @include rotate(-3deg); }
-	&:after { right: 10px; @include rotate(3deg); }
-}
-
-@mixin shadow-perspective {
-	&:before {
-		left:80px; bottom:5px;
-		width:50%; height:35%;
-		max-width:200px;
-		max-height:50px;
-		
-		@include box-shadow(-80px 0 8px rgba(black, .4));
-		@include skew(50deg, 0 , false);
-		@include experimental(transform-origin, 0 100%);
-	}
-	&:after { display: none; content: none; }
-}
-
-@mixin shadow-raised {
-	@include box-shadow(
-		0 15px 10px -10px rgba(black, .5)
-	);
-	
-	&:before, &:after {
-		content: none;
-	}
-}
-
-@mixin shadow-curved {
-	&:before {
-		top:10px; bottom:10px;
-		left:0; right:50%;
-		@include box-shadow(0 0 15px rgba(black, .6));
-		@include border-radius(10px / 100px);
-	}
-}
-
-@mixin shadow-curved-top-bottom {
-	&:before {
-		top:0; bottom:0;
-		left:10px; right:10px;
-		@include border-radius(100px / 10px);
+	@if $type == curved-top { 
+		@include shadow-curved(); 
+		@include shadow-curved-top(); 
 	}
 }
 
 /******************************************************************
 SHADOW CLASSES
 ******************************************************************/
-$shadow_types: lifted, perspective, raised, curved;
+$shadow_types: lifted, perspective, raised, curved, curved-top;
 
 @each $type in $shadow_types {
 	.shadow.#{$type} {

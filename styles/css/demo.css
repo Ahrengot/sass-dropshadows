@@ -1,5 +1,7 @@
-/******************************************************************
-COMPASS IMPORTS
+/*****************************************************************
+IMPORT COMPASS
+- If you don't have Compass you can create your own mixins
+for CSS3 or use bourbon etc.
 ******************************************************************/
 /******************************************************************
 MIXINS
@@ -7,62 +9,62 @@ MIXINS
 /******************************************************************
 STYLING
 ******************************************************************/
-/* line 36, ../scss/demo.scss */
+/* line 38, ../scss/demo.scss */
 * { margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
-/* line 38, ../scss/demo.scss */
+/* line 40, ../scss/demo.scss */
 body { background: #eee; font: 14px/1.25 "Helvetica Neue", sans-serif; color: #444; }
-@media (min-width: 1500px) { /* line 38, ../scss/demo.scss */
+@media (min-width: 1500px) { /* line 40, ../scss/demo.scss */
   body { font-size: 17px; } }
 
-/* line 46, ../scss/demo.scss */
+/* line 48, ../scss/demo.scss */
 h1, h2, h3, h4, h5, h6 { color: #222; line-height: 1em; margin-bottom: .5em; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
-/* line 53, ../scss/demo.scss */
+/* line 55, ../scss/demo.scss */
 h1.emboss, h2.emboss, h3.emboss, h4.emboss, h5.emboss, h6.emboss { text-shadow: 0 1px 2px white; }
 
-/* line 58, ../scss/demo.scss */
-h1 { font-size: 3em; max-width: 80%; }
+/* line 60, ../scss/demo.scss */
+h1 { font-size: 3em; max-width: 80%; word-break: hyphenate; }
 
-/* line 63, ../scss/demo.scss */
+/* line 66, ../scss/demo.scss */
 a { color: #0088cc; text-decoration: none; -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
-/* line 68, ../scss/demo.scss */
+/* line 71, ../scss/demo.scss */
 a:hover, a:focus { text-decoration: underline; }
-/* line 69, ../scss/demo.scss */
+/* line 72, ../scss/demo.scss */
 a:active { color: #005580; }
 
-/* line 72, ../scss/demo.scss */
+/* line 75, ../scss/demo.scss */
 p { margin: 0 0 1em; }
 
-/* line 74, ../scss/demo.scss */
+/* line 77, ../scss/demo.scss */
 #container { width: 80%; margin: 4% auto 10%; max-width: 1380px; }
 
-/* line 80, ../scss/demo.scss */
+/* line 83, ../scss/demo.scss */
 footer { margin-top: 3em; text-align: center; }
 
-/* line 84, ../scss/demo.scss */
+/* line 87, ../scss/demo.scss */
 #main { margin-top: 1.5em; *zoom: 1; }
-/* line 29, ../scss/demo.scss */
+/* line 31, ../scss/demo.scss */
 #main:before, #main:after { display: table; content: ''; }
-/* line 30, ../scss/demo.scss */
+/* line 32, ../scss/demo.scss */
 #main:after { clear: both; }
-/* line 88, ../scss/demo.scss */
-#main div { padding: 2em 0.5em; margin: 1em 0; background: white; border-radius: .3em; text-align: center; border: thin solid rgba(0, 0, 0, 0.15); }
-@media (min-width: 768px) { /* line 88, ../scss/demo.scss */
+/* line 91, ../scss/demo.scss */
+#main div { padding: 2em 0.5em; margin: 2em 0; background: white; border-radius: .3em; text-align: center; border: thin solid rgba(0, 0, 0, 0.15); }
+@media (min-width: 768px) { /* line 91, ../scss/demo.scss */
   #main div { width: 46%; float: left; margin-left: 8%; }
-  /* line 105, ../scss/demo.scss */
+  /* line 108, ../scss/demo.scss */
   #main div:nth-child(odd) { margin-left: 0; } }
-@media (min-width: 1320px) { /* line 88, ../scss/demo.scss */
+@media (min-width: 1320px) { /* line 91, ../scss/demo.scss */
   #main div { width: 28%; }
-  /* line 111, ../scss/demo.scss */
+  /* line 114, ../scss/demo.scss */
   #main div:nth-child(odd) { margin-left: 8%; }
-  /* line 112, ../scss/demo.scss */
+  /* line 115, ../scss/demo.scss */
   #main div:nth-child(3n+1) { margin-left: 0; } }
-/* line 115, ../scss/demo.scss */
+/* line 118, ../scss/demo.scss */
 #main div p { margin-bottom: .3em; }
-/* line 117, ../scss/demo.scss */
-#main div p span { display: none; }
 /* line 120, ../scss/demo.scss */
+#main div p span { display: none; }
+/* line 123, ../scss/demo.scss */
 #main div:hover p { opacity: 1; }
 
-/* line 124, ../scss/demo.scss */
+/* line 127, ../scss/demo.scss */
 code { font: 1em/1 Monaco, "Liberation Mono", Courier, monospace; color: #bbb; }
