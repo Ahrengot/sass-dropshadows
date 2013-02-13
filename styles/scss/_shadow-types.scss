@@ -26,6 +26,20 @@
 	&:after { display: none; content: none; }
 }
 
+@mixin shadow-perspective-right {
+	&:before {
+		right:80px; bottom:5px;
+		width:50%; height:35%;
+		max-width:200px;
+		max-height:50px;
+		
+		@include box-shadow(80px 0 8px rgba(black, .4));
+		@include skew(-50deg, 0 , false);
+		@include experimental(transform-origin, 0 100%);
+	}
+	&:after { display: none; content: none; }
+}
+
 @mixin shadow-raised {
 	@include box-shadow(
 		0 15px 10px -10px rgba(black, .5)
