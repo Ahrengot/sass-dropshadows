@@ -21,42 +21,48 @@ h1, h2, h3, h4, h5, h6 { color: #222; line-height: 1em; margin-bottom: .5em; tex
 h1.emboss, h2.emboss, h3.emboss, h4.emboss, h5.emboss, h6.emboss { text-shadow: 0 1px 2px white; }
 
 /* line 58, ../scss/demo.scss */
-a { color: #0088cc; text-decoration: none; -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
+h1 { font-size: 3em; max-width: 80%; }
+
 /* line 63, ../scss/demo.scss */
+a { color: #0088cc; text-decoration: none; -webkit-transition: color 0.15s ease-out; -moz-transition: color 0.15s ease-out; -o-transition: color 0.15s ease-out; transition: color 0.15s ease-out; }
+/* line 68, ../scss/demo.scss */
 a:hover, a:focus { text-decoration: underline; }
-/* line 64, ../scss/demo.scss */
+/* line 69, ../scss/demo.scss */
 a:active { color: #005580; }
 
-/* line 67, ../scss/demo.scss */
+/* line 72, ../scss/demo.scss */
+p { margin: 0 0 1em; }
+
+/* line 74, ../scss/demo.scss */
 #container { width: 80%; margin: 4% auto 10%; max-width: 1380px; }
 
-/* line 73, ../scss/demo.scss */
+/* line 80, ../scss/demo.scss */
 footer { margin-top: 3em; text-align: center; }
-/* line 75, ../scss/demo.scss */
-footer p { margin: 0 0 1em; }
 
-/* line 78, ../scss/demo.scss */
+/* line 84, ../scss/demo.scss */
 #main { margin-top: 1.5em; *zoom: 1; }
 /* line 29, ../scss/demo.scss */
 #main:before, #main:after { display: table; content: ''; }
 /* line 30, ../scss/demo.scss */
 #main:after { clear: both; }
-/* line 82, ../scss/demo.scss */
+/* line 88, ../scss/demo.scss */
 #main div { padding: 2em 0.5em; margin: 1em 0; background: white; border-radius: .3em; text-align: center; border: thin solid rgba(0, 0, 0, 0.15); }
-@media (min-width: 768px) { /* line 82, ../scss/demo.scss */
+@media (min-width: 768px) { /* line 88, ../scss/demo.scss */
   #main div { width: 46%; float: left; margin-left: 8%; }
-  /* line 99, ../scss/demo.scss */
-  #main div:nth-child(odd) { margin-left: 0; } }
-@media (min-width: 1320px) { /* line 82, ../scss/demo.scss */
-  #main div { width: 28%; }
   /* line 105, ../scss/demo.scss */
+  #main div:nth-child(odd) { margin-left: 0; } }
+@media (min-width: 1320px) { /* line 88, ../scss/demo.scss */
+  #main div { width: 28%; }
+  /* line 111, ../scss/demo.scss */
   #main div:nth-child(odd) { margin-left: 8%; }
-  /* line 106, ../scss/demo.scss */
+  /* line 112, ../scss/demo.scss */
   #main div:nth-child(3n+1) { margin-left: 0; } }
-/* line 110, ../scss/demo.scss */
+/* line 115, ../scss/demo.scss */
+#main div p { margin-bottom: .3em; }
+/* line 117, ../scss/demo.scss */
 #main div p span { display: none; }
-/* line 113, ../scss/demo.scss */
+/* line 120, ../scss/demo.scss */
 #main div:hover p { opacity: 1; }
 
-/* line 117, ../scss/demo.scss */
+/* line 124, ../scss/demo.scss */
 code { font: 1em/1 Monaco, "Liberation Mono", Courier, monospace; color: #bbb; }

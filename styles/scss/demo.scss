@@ -55,6 +55,11 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+h1 {
+	font-size: 3em;
+	max-width: 80%;
+}
+
 a { 
 	color: #0088cc; 
 	text-decoration: none;
@@ -64,6 +69,8 @@ a {
 	&:active { color: #005580; }
 }
 
+p { margin: 0 0 1em; }
+
 #container {
 	width: 80%;
 	margin: 4% auto 10%;
@@ -72,7 +79,6 @@ a {
 
 footer { 
 	margin-top: 3em; text-align: center; 
-	p { margin: 0 0 1em; }
 }
 
 #main {
@@ -107,6 +113,7 @@ footer {
 		}
 
 		p {
+			margin-bottom: .3em;
 			span { display: none; }
 		}
 
