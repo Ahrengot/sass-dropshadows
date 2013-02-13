@@ -18,6 +18,7 @@ SHADOW MIXINS
 	
 	@if $type == lifted { @include shadow-lifted(); }
 	@if $type == perspective { @include shadow-perspective(); }
+	@if $type == raised { @include shadow-raised(); }
 }
 
 @mixin shadow-lifted {
@@ -48,10 +49,20 @@ SHADOW MIXINS
 	&:after { display: none; content: none; }
 }
 
+@mixin shadow-raised {
+	@include box-shadow(
+		0 15px 10px -10px rgba(black, .5)
+	);
+	
+	&:before, &:after {
+		content: none;
+	}
+}
+
 /******************************************************************
 SHADOW CLASSES
 ******************************************************************/
-$types: lifted, perspective, raised-box;
+$types: lifted, perspective, raised;
 
 @each $type in $types {
 	.shadow.#{$type} {
