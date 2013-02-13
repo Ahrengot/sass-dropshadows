@@ -62,13 +62,44 @@
 }
 
 @mixin shadow-curved-top {
+	@include shadow-curved();
+	
 	&:before {
 		bottom: 50%;
 	}
 }
 
 @mixin shadow-curved-bottom {
+	@include shadow-curved();
+
 	&:before {
 		top: 50%;
+	}
+}
+
+@mixin shadow-curved-vertical {
+	&:before {
+		top:10px; bottom:10px;
+		left:0; right:0%;
+		
+		@include box-shadow(0 0 13px 4px rgba(black, .5));
+		-moz-border-radius:10px / 100px;
+		border-radius:10px / 100px;
+	}
+}
+
+@mixin shadow-curved-vertical-left {
+	@include shadow-curved-vertical();
+
+	&:before {
+		right: 50%;
+	}
+}
+
+@mixin shadow-curved-vertical-right {
+	@include shadow-curved-vertical();
+
+	&:before {
+		left: 50%;
 	}
 }

@@ -15,44 +15,39 @@ SHADOW MIXINS
 ******************************************************************/
 @mixin shadow($type: lifted) {
 	position: relative;
+	
 	&:before, &:after { 
 		position: absolute; 
 		z-index: -2; 
 		content: '' 
 	}
 	
-	@if $type == lifted { @include shadow-lifted(); }
-	
-	@if $type == perspective { @include shadow-perspective(); }
-	
-	@if $type == perspective-right { @include shadow-perspective-right(); }
-	
-	@if $type == raised { @include shadow-raised(); }
-	
-	@if $type == curved { 
-		@include shadow-curved(); 
-	}
-
-	@if $type == curved-top { 
-		@include shadow-curved(); 
-		@include shadow-curved-top(); 
-	}
-
-	@if $type == curved-bottom { 
-		@include shadow-curved(); 
-		@include shadow-curved-bottom(); 
-	}
-
-	@if $type == curved-vertical { 
-		@include shadow-curved(); 
-		@include shadow-curved-bottom(); 
-	}
+	@if $type == lifted { @include shadow-lifted(); }	
+	@if $type == perspective { @include shadow-perspective(); }	
+	@if $type == perspective-right { @include shadow-perspective-right(); }	
+	@if $type == raised { @include shadow-raised(); }	
+	@if $type == curved { @include shadow-curved(); }
+	@if $type == curved-top { @include shadow-curved-top(); }
+	@if $type == curved-bottom { @include shadow-curved-bottom(); }
+	@if $type == curved-vertical { @include shadow-curved-vertical(); }
+	@if $type == curved-vertical-left { @include shadow-curved-vertical-left(); }
+	@if $type == curved-vertical-right { @include shadow-curved-vertical-right(); }
 }
 
 /******************************************************************
 SHADOW CLASSES
 ******************************************************************/
-$shadow_types: lifted, perspective, perspective-right, raised, curved, curved-top, curved-bottom, curved-vertical;
+$shadow_types: 
+	lifted, 
+	raised, 
+	perspective, 
+	perspective-right, 
+	curved, 
+	curved-top, 
+	curved-bottom, 
+	curved-vertical,
+	curved-vertical-left,
+	curved-vertical-right;
 
 @each $type in $shadow_types {
 	.shadow.#{$type} {
