@@ -42,7 +42,7 @@ footer p { margin: 0 0 1em; }
 /* line 30, ../scss/demo.scss */
 #main:after { clear: both; }
 /* line 82, ../scss/demo.scss */
-#main div { padding: 2em 0.5em; margin: 1em 0; background: white; border-radius: .2em; text-align: center; border: thin solid rgba(0, 0, 0, 0.15); }
+#main div { padding: 2em 0.5em; margin: 1em 0; background: white; border-radius: .3em; text-align: center; border: thin solid rgba(0, 0, 0, 0.15); }
 @media (min-width: 768px) { /* line 82, ../scss/demo.scss */
   #main div { width: 46%; float: left; margin-left: 8%; }
   /* line 99, ../scss/demo.scss */

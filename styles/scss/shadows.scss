@@ -19,6 +19,10 @@ SHADOW MIXINS
 	@if $type == lifted { @include shadow-lifted(); }
 	@if $type == perspective { @include shadow-perspective(); }
 	@if $type == raised { @include shadow-raised(); }
+	@if $type == curved { 
+		@include shadow-curved(); 
+		@include shadow-curved-top-bottom();
+	}
 }
 
 @mixin shadow-lifted {
@@ -59,13 +63,39 @@ SHADOW MIXINS
 	}
 }
 
+@mixin shadow-curved {
+	&:before {
+		top:10px; bottom:10px;
+		left:0; right:50%;
+		@include box-shadow(0 0 15px rgba(black, .6));
+		@include border-radius(10px / 100px);
+	}
+}
+
+@mixin shadow-curved-top-bottom {
+	&:before {
+		top:0; bottom:0;
+		left:10px; right:10px;
+		@include border-radius(100px / 10px);
+	}
+}
+
 /******************************************************************
 SHADOW CLASSES
 ******************************************************************/
-$types: lifted, perspective, raised;
+$shadow_types: lifted, perspective, raised, curved;
 
-@each $type in $types {
+@each $type in $shadow_types {
 	.shadow.#{$type} {
 		@include shadow($type);
 	}
+}
+
+// Map .shadow, with no other classes applied, to .shadow.lifted
+$shadow_not_selector: '';
+@each $type in $shadow_types { 
+	$shadow_not_selector: $shadow_not_selector + ":not(.#{$type})";
+}
+.shadow#{unquote($shadow_not_selector)} {
+	@include shadow(lifted);
 }
