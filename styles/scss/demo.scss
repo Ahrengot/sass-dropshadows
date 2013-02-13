@@ -1,3 +1,50 @@
+
+/******************************************************************
+THIS IS JUST DEMO CSS USED BY THE EXAMPLES
+- For the actual shadow css open shadows.css
+******************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*****************************************************************
 IMPORT COMPASS
 - If you don't have Compass you can create your own mixins
@@ -94,11 +141,9 @@ footer {
 
 		background: white;
 		border-radius: .3em;
+		border: thin solid rgba(black, .15);
 		
 		text-align: center;
-
-		border: thin solid rgba(black, .15);
-
 
 		@include breakpoint(m) {
 			width: 46%;
