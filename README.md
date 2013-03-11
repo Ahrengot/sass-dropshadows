@@ -9,9 +9,11 @@ Yup, here: http://ahrengot.com/web-development/css-shadows-without-images/
 
 ## How do I use these?
 *As a SASS mixin:*
+    
     div {
         @include shadow('curved');
     }
 
 *Using the CSS class names:*
+    
     <div class="shadow curved"></div>
