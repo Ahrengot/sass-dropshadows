@@ -1,4 +1,5 @@
 # SASS shadows without images
+![SASS Shadows without images](http://f.cl.ly/items/0r3u2n280w2q2H1a3S3e/shadows.png)
 Based on [CSS Drop Shadows by Nicolas Gallagher](http://nicolasgallagher.com/css-drop-shadows-without-images/)
 
 ## What is this?
