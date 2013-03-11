@@ -7,7 +7,7 @@
 A bunch of CSS classes and SASS mixins for creating resolution-independent crisp and visually appealing shadows without using any images.
 
 ## Can I see a demo?
-Yup, here: http://ahrengot.com/web-development/css-shadows-without-images/
+Yup, check out the 10 various shadow types here: http://ahrengot.github.com/sass-dropshadows/
 
 ## How do I use these?
 *As a SASS mixin:*
