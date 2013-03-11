@@ -1,4 +1,5 @@
 # SASS shadows without images
+- Based on [CSS Drop Shadows by Nicolas Gallagher](http://nicolasgallagher.com/css-drop-shadows-without-images/)
 
 ## What is this?
 A bunch of CSS classes and SASS mixins for creating resolution-independent crisp and visually appealing shadows without using any images.
